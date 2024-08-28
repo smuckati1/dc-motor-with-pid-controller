@@ -9,9 +9,6 @@ function genCCode()
 
 % Get handle to project
     prj = matlab.project.currentProject;
-    disp(' ')
-    disp("Project: " + prj.Name)
-    disp('Generating C Code...')
 
 % Generate C Code
     slbuild(mdlName) 

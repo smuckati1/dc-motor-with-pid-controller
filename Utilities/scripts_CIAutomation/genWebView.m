@@ -2,12 +2,7 @@ function genWebView()
 % This script is to automate the webview generation of models contained in this project
 
 % List names of all models for which code is being generated
-    mdlName = {'dcmtr_testharness'};
-
-% Get handle to project
-    prj = matlab.project.currentProject;
-    disp(' ')
-    disp("Project: " + prj.Name)
+    mdlName = {'dcmtr_closedLoop'};
 
 % Generate Webview
     for i = 1:length(mdlName)
@@ -16,8 +11,7 @@ function genWebView()
         load_system(mdlName{i})
         mdl_webView = slwebview(mdlName{i}, ...
             'FollowModelReference','on',...
-            'PackageName', ['WebExplore_' mdlName{i}],...
-            'PackageFolder',fullfile(prj.RootFolder,'GeneratedArtifacts','Webviews'));
+            'PackageName', ['WebExplore_' mdlName{i}]);
         close_system(mdlName{i})
     end
 

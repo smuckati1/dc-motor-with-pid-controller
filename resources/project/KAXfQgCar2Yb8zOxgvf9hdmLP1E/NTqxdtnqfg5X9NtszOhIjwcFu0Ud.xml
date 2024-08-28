@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Info File="Models/2. Closed Loop Model/dcmtr_closedLoop.slx" GroupUUID="" Icon="" Name="Closed Loop Model" Type="Basic" Visible="1"/>
+<Info File="Controller Models/2. Closed Loop Model/dcmtr_closedLoop.slx" GroupUUID="" Icon="" Name="Closed Loop Model" Type="Basic" Visible="1"/>

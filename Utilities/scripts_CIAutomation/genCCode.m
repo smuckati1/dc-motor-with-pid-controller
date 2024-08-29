@@ -5,7 +5,7 @@ function genCCode()
     scrubSharedUtils();
     
 % List names of all models for which code is being generated
-    mdlName = {'dcmtrCtrl_PID','dcmtrCtrl_PID_wHandCode'};
+    mdlName = {'dcmtrCtrl_PID'};
 
 % Get handle to project
     prj = matlab.project.currentProject;

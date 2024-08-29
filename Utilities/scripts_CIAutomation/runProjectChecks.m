@@ -29,8 +29,7 @@ function runProjectChecks()
 % Run ModelAdvisor Checks
     for i = 1:length(mdlName)
         results = ModelAdvisor.run(mdlName{i},checkIDs,...
-            'ReportFormat','html',...
-            'ReportName',[mdlName{i} '_MISRAchecks']);
+            'DisplayResults','Summary');
     end
 
 % Cleanup

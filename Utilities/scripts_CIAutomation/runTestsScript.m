@@ -1,8 +1,8 @@
+function runTestsScript()
 % This script is to automate the tests contained in this project
 
-    prj = matlab.project.currentProject;
-
 % Load test file
+    prj = matlab.project.currentProject;
     testSuite = sltest.testmanager.load('dcmtrCTRL_PID_Tests.mldatx');
 
 % Run the tests

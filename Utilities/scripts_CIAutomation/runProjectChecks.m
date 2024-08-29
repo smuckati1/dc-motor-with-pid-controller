@@ -2,7 +2,7 @@ function runProjectChecks()
 % This script is to automate the checks contained in this project
 
 % List names of all models for which code is being generated
-    mdlName = {'dcmtrCtrl_PID','dcmtrCtrl_PID_wHandCode'};
+    mdlName = {'dcmtrCtrl_PID'};
 
 % Specify which checks to run. For a list of all checks, look under "Model Advisor checks"
 % at https://www.mathworks.com/help/slcheck/check-model-compliance.html?s_tid=CRUX_lftnav
@@ -29,9 +29,7 @@ function runProjectChecks()
 % Run ModelAdvisor Checks
     for i = 1:length(mdlName)
         results = ModelAdvisor.run(mdlName{i},checkIDs,...
-            'DisplayResults','Details',...
-            'ReportFormat','html','ReportPath', fullfile(prj.RootFolder,'GeneratedArtifacts','CheckResults'),...
-            'ReportName',[mdlName{i} '_MISRAchecks']);
+            'DisplayResults','Summary');
     end
 
 % Cleanup
